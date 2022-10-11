@@ -9,6 +9,7 @@
 
 :root {
   --Dark-cyan: hsl(158, 36%, 37%);
+  --Hover-dark-cyan: hsl(156, 59%, 25%);
   --Cream: hsl(30, 38%, 92%);
 
   --Very-dark-blue: hsl(212, 21%, 14%);
@@ -17,7 +18,6 @@
 }
 
 body {
-  /* font-family: 'Fraunces', serif; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,12 +36,8 @@ body {
 }
 
 .card__image {
+  background: no-repeat center / cover url('images/image-product-desktop.jpg');
   width: 50%;
-}
-
-.card__image img {
-  width: 100%;
-  height: 100%;
   border-radius: 10px 0 0 10px;
 }
 
@@ -49,21 +45,64 @@ body {
   width: 50%;
   padding: 25px;
 }
-
-h1 {
-  font-family: 'Fraunces', serif;
+.card-body__category {
+  font-size: 10px;
+  color: var(--Dark-grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
+.card-body__name {
+  margin-top: 15px;
+  font-weight: 700;
+  font-family: 'Fraunces', serif;
+  line-height: 28px;
+}
+
+.card-body__text {
+  margin-top: 15px;
+  line-height: 22px;
+  color: var(--Dark-grayish-blue);
+}
+
+.card__cost {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
 
 .card__cost-current {
   font-family: 'Fraunces', serif;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--Dark-cyan);
+  margin-right: 20px;
+}
+
+.card__cost-old {
+  text-decoration: line-through;
 }
 
 .card__add {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   background-color: var(--Dark-cyan);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card__add a {
+  color: var(--White);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card__add:hover {
+  background-color: var(--Hover-dark-cyan);
+  cursor: pointer;
 }
 
 
@@ -74,4 +113,34 @@ h1 {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (max-width: 376px) {
+  .card {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .card__image, 
+  .card__body {
+    width: 100%;
+  }
+
+  .card__image {
+    background: no-repeat center / cover url('images/image-product-mobile.jpg');
+    height: 250px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .card-body__name {
+    font-size: 32px;
+  }
+
+  footer {
+    display: none;
+  }
 }
