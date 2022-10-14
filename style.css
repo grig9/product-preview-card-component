@@ -30,13 +30,12 @@ body {
 .card {
   display: flex;
   background-color: var(--white);
-  width: 700px;
+  width: 600px;
   border-radius: 10px;
 }
 
 .card__image {
   flex: 50%;
-  height: 452px;
 }
 
 .card__image img {
@@ -52,7 +51,7 @@ body {
   padding: 30px;
 }
 .card-body__category {
-  font-size: 1.0rem;
+  font-size: 1.4rem;
   color: var(--dark-grayish-blue);
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -64,7 +63,7 @@ body {
   font-weight: 700;
   font-family: 'Fraunces', serif;
   line-height: 32px;
-  padding-right: 70px;
+  padding-right: 30px;
 }
 
 .card-body__text {
@@ -75,7 +74,7 @@ body {
 }
 
 .card__cost {
-  margin-top: 30px;
+  margin-top: 25px;
   display: flex;
   align-items: center;
 }
@@ -89,7 +88,7 @@ body {
 }
 
 .card__cost-old {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-decoration: line-through;
   color: var(--dark-grayish-blue);
 }
@@ -141,6 +140,7 @@ body {
   .card {
     flex-direction: column;
     width: 92%;
+    height: 100%;
     margin: auto;
     border-radius: 15px;
   }
