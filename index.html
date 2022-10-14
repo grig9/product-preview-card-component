@@ -17,7 +17,16 @@
   <body>
     <main>
       <div class="card">
-        <div class="card__image"></div>
+        <picture class="card__image">
+          <source
+            media="(max-width:768px)"
+            srcset="images/image-product-mobile.jpg"
+          />
+          <img
+            src="images/image-product-desktop.jpg"
+            alt="Gabrielle Parfum image"
+          />
+        </picture>
         <div class="card__body">
           <span class="card-body__category">perfume</span>
           <h1 class="card-body__name">Gabrielle Essence Eau De Parfum</h1>
@@ -29,10 +38,7 @@
             <div class="card__cost-current">$149.99</div>
             <div class="card__cost-old">$169.99</div>
           </div>
-          <div class="card__add">
-            <img src="images/icon-cart.svg" alt="icon cart" />
-            <a href="#">Add to Cart</a>
-          </div>
+          <a class="card__add-btn" href="#">Add to Cart</a>
         </div>
       </div>
     </main>
@@ -40,7 +46,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">grig9</a>.
+      >. Coded by <a href="https://github.com/grig9">grig9</a>.
     </footer>
   </body>
 </html>
