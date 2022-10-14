@@ -23,4 +23,4 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ## Author
 
-- Website - Alex (https://grig9.github.io)
+- Website - Alex (https://github.com/grig9)
